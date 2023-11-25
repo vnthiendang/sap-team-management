@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
     <edmx:DataServices m:DataServiceVersion="2.0">
-        <Schema Namespace="Z03_024_FPLAYER_01_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-            <EntityType Name="Player" sap:content-version="1">
+        <Schema Namespace="Z03_024_FMATCH_01_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Match" sap:content-version="1">
                 <Key>
-                    <PropertyRef Name="PlayerId"/>
-                    <PropertyRef Name="PlayerPosition"/>
+                    <PropertyRef Name="MatchId"/>
+                    <PropertyRef Name="MatchDate"/>
                 </Key>
-                <Property Name="PlayerId" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="MU ID" sap:updatable="false" sap:sortable="false"/>
-                <Property Name="PlayerName" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Name of P" sap:sortable="false"/>
-                <Property Name="Birth" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Day of Birth" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Nationality" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="National of player" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="PlayerSalary" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Salary of player" sap:filterable="false"/>
-                <Property Name="PlayerPosition" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Position of player" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MatchId" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Match ID" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="AwayTeam" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Away Team" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MatchDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Match Date" sap:updatable="false"/>
+                <Property Name="Stadium" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Match Stadium" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HomeGoals" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="Home Goals" sap:filterable="false"/>
+                <Property Name="AwayGoals" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="Away Goals" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Winner" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Winner" sap:sortable="false" sap:filterable="false"/>
             </EntityType>
-            <EntityContainer Name="Z03_024_FPLAYER_01_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
-                <EntitySet Name="Players" EntityType="Z03_024_FPLAYER_01_SRV.Player" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            <EntityContainer Name="Z03_024_FMATCH_01_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="Matches" EntityType="Z03_024_FMATCH_01_SRV.Match" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
             </EntityContainer>
-            <atom:link rel="self" href="https://s72lp1.ucc.in.tum.de:8100/sap/opu/odata/sap/Z03_024_FPLAYER_01_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
-            <atom:link rel="latest-version" href="https://s72lp1.ucc.in.tum.de:8100/sap/opu/odata/sap/Z03_024_FPLAYER_01_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="self" href="https://s72lp1.ucc.in.tum.de:8100/sap/opu/odata/sap/Z03_024_FMATCH_01_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://s72lp1.ucc.in.tum.de:8100/sap/opu/odata/sap/Z03_024_FMATCH_01_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

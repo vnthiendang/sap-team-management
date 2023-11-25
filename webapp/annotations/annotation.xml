@@ -8,45 +8,49 @@
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
         <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
     </edmx:Reference>
-    <edmx:Reference Uri="/sap/opu/odata/sap/Z03_024_FPLAYER_01_SRV/$metadata">
-        <edmx:Include Namespace="Z03_024_FPLAYER_01_SRV"/>
+    <edmx:Reference Uri="/sap/opu/odata/sap/Z03_024_FMATCH_01_SRV/$metadata">
+        <edmx:Include Namespace="Z03_024_FMATCH_01_SRV"/>
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
-            <Annotations Target="Z03_024_FPLAYER_01_SRV.Player">
+            <Annotations Target="Z03_024_FMATCH_01_SRV.Match">
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="PlayerId"/>
-                            <PropertyValue Property="Label" String="Player ID"/>
+                            <PropertyValue Property="Value" Path="MatchId"/>
+                            <PropertyValue Property="Label" String="Match ID"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="PlayerName"/>
-                            <PropertyValue Property="Label" String="Player Name"/>
+                            <PropertyValue Property="Value" Path="MatchDate"/>
+                            <PropertyValue Property="Label" String="Match Date"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Nationality"/>
-                            <PropertyValue Property="Label" String="Nationality"/>
+                            <PropertyValue Property="Value" Path="AwayGoals"/>
+                            <PropertyValue Property="Label" String="Away Goal"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Birth"/>
-                            <PropertyValue Property="Label" String="Date of Birth"/>
+                            <PropertyValue Property="Value" Path="AwayTeam"/>
+                            <PropertyValue Property="Label" String="Away Team"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="PlayerPosition"/>
-                            <PropertyValue Property="Label" String="Position"/>
+                            <PropertyValue Property="Value" Path="HomeGoals"/>
+                            <PropertyValue Property="Label" String="Home Goal"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="PlayerSalary"/>
-                            <PropertyValue Property="Label" String="Salary"/>
+                            <PropertyValue Property="Value" Path="Stadium"/>
+                            <PropertyValue Property="Label" String="Stadium"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
                         </Record>
-                    </Collection>
-                </Annotation>
-                <Annotation Term="UI.SelectionFields">
-                    <Collection>
-                        <PropertyPath>PlayerName</PropertyPath>
-                        <PropertyPath>PlayerPosition</PropertyPath>
-                        <PropertyPath>Nationality</PropertyPath>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Winner"/>
+                            <PropertyValue Property="Label" String="Team Winner"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
                     </Collection>
                 </Annotation>
                 <Annotation Term="UI.FieldGroup" Qualifier="GeneralInfo">
@@ -54,22 +58,25 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="PlayerName"/>
+                                    <PropertyValue Property="Value" Path="MatchId"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="PlayerId"/>
+                                    <PropertyValue Property="Value" Path="MatchDate"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="Birth"/>
+                                    <PropertyValue Property="Value" Path="AwayGoals"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="Nationality"/>
+                                    <PropertyValue Property="Value" Path="AwayTeam"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="PlayerPosition"/>
+                                    <PropertyValue Property="Value" Path="HomeGoals"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="PlayerSalary"/>
+                                    <PropertyValue Property="Value" Path="Stadium"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Winner"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
@@ -79,7 +86,7 @@
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="General Info"/>
-                            <PropertyValue Property="ID" String="GeneralInfoSection"/>
+                            <PropertyValue Property="ID" String="GeneralInfo"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#GeneralInfo"/>
                         </Record>
                     </Collection>

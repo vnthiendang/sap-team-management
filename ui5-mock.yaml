@@ -2,7 +2,7 @@
 
 specVersion: "3.1"
 metadata:
-  name: z03024fplayer
+  name: z03024fmatch
 type: application
 server:
   customMiddleware:
@@ -30,7 +30,7 @@ server:
       configuration:
         mountPath: /
         services:
-          - urlPath: /sap/opu/odata/sap/Z03_024_FPLAYER_01_SRV
+          - urlPath: /sap/opu/odata/sap/Z03_024_FMATCH_01_SRV
             metadataPath: ./webapp/localService/metadata.xml
             mockdataPath: ./webapp/localService/data
             generateMockData: true

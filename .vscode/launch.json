@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Start z03024fplayer",
+            "name": "Start z03024fmatch",
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "npx",
@@ -16,7 +16,7 @@
             ],
             "args": [
                 "--open",
-                "test/flpSandbox.html#z03024fplayer-tile"
+                "test/flpSandbox.html#z03024fmatch-tile"
             ],
             "console": "internalConsole",
             "internalConsoleOptions": "openOnSessionStart",
@@ -28,7 +28,7 @@
             }
         },
         {
-            "name": "Start z03024fplayer Mock",
+            "name": "Start z03024fmatch Mock",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -44,7 +44,7 @@
                 "--config",
                 "./ui5-mock.yaml",
                 "--open",
-                "test/flpSandbox.html#z03024fplayer-tile"
+                "test/flpSandbox.html#z03024fmatch-tile"
             ],
             "console": "internalConsole",
             "internalConsoleOptions": "openOnSessionStart",
@@ -55,7 +55,7 @@
             }
         },
         {
-            "name": "Start z03024fplayer Local",
+            "name": "Start z03024fmatch Local",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -71,7 +71,7 @@
                 "--config",
                 "./ui5-local.yaml",
                 "--open",
-                "test/flpSandbox.html#z03024fplayer-tile"
+                "test/flpSandbox.html#z03024fmatch-tile"
             ],
             "console": "internalConsole",
             "internalConsoleOptions": "openOnSessionStart",

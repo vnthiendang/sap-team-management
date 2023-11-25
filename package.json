@@ -1,5 +1,5 @@
 {
-    "name": "z03024fplayer",
+    "name": "z03024fmatch",
     "version": "0.0.1",
     "private": true,
     "description": "A Fiori application.",
@@ -19,13 +19,13 @@
         "ui5-task-flatten-library": "0.2.5"
     },
     "scripts": {
-        "start": "fiori run --open \"test/flpSandbox.html?sap-client=303&sap-ui-xx-viewCache=false#z03024fplayer-tile\"",
-        "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-client=303&sap-ui-xx-viewCache=false#z03024fplayer-tile\"",
+        "start": "fiori run --open \"test/flpSandbox.html?sap-client=303&sap-ui-xx-viewCache=false#z03024fmatch-tile\"",
+        "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-client=303&sap-ui-xx-viewCache=false#z03024fmatch-tile\"",
         "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
         "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml && rimraf archive.zip",
         "deploy-config": "fiori add deploy-config",
         "start-noflp": "fiori run --open \"index.html?sap-client=303&sap-ui-xx-viewCache=false\"",
-        "start-mock": "fiori run --config ./ui5-mock.yaml --open \"test/flpSandbox.html?sap-client=303&sap-ui-xx-viewCache=false#z03024fplayer-tile\"",
+        "start-mock": "fiori run --config ./ui5-mock.yaml --open \"test/flpSandbox.html?sap-client=303&sap-ui-xx-viewCache=false#z03024fmatch-tile\"",
         "start-variants-management": "fiori run --open \"preview.html?&sap-client=303&sap-ui-xx-viewCache=false&fiori-tools-rta-mode=true&sap-ui-rta-skip-flex-validation=true#preview-app\"",
         "undeploy": "fiori undeploy --config ui5-deploy.yaml",
         "deploy-test": "npm run build && fiori deploy --config ui5-deploy.yaml --testMode true"
