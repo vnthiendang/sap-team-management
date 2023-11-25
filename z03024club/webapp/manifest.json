@@ -1,7 +1,7 @@
 {
   "_version": "1.28.0",
   "sap.app": {
-    "id": "z03024fplayer",
+    "id": "z03024club",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -12,12 +12,12 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
-      "version": "1.11.3",
-      "toolsId": "3f30adf0-b7d8-4fe4-ba76-9503e02ccbd8"
+      "version": "1.11.4",
+      "toolsId": "424150a6-09c3-4e1a-8fa5-3f4e08c5429d"
     },
     "dataSources": {
       "mainService": {
-        "uri": "/sap/opu/odata/sap/Z03_024_FPLAYER_01_SRV/",
+        "uri": "/sap/opu/odata/sap/Z03_024_FCLUB_01_SRV/",
         "type": "OData",
         "settings": {
           "annotations": [
@@ -37,11 +37,10 @@
     },
     "crossNavigation": {
       "inbounds": {
-        "Z03024_Player-display": {
-          "semanticObject": "Z03024_Player",
-          "action": "display",
+        "z03024_club-manage": {
+          "semanticObject": "z03024_club",
+          "action": "manage",
           "title": "{{flpTitle}}",
-          "subTitle": "{{flpSubtitle}}",
           "signature": {
             "parameters": {},
             "additionalParameters": "allowed"
@@ -88,7 +87,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "z03024fplayer.i18n.i18n"
+          "bundleName": "z03024club.i18n.i18n"
         }
       },
       "": {
@@ -126,8 +125,8 @@
       "showDraftToggle": false
     },
     "pages": {
-      "ListReport|Players": {
-        "entitySet": "Players",
+      "ListReport|FClubs": {
+        "entitySet": "FClubs",
         "component": {
           "name": "sap.suite.ui.generic.template.ListReport",
           "list": true,
@@ -143,8 +142,8 @@
           }
         },
         "pages": {
-          "ObjectPage|Players": {
-            "entitySet": "Players",
+          "ObjectPage|FClubs": {
+            "entitySet": "FClubs",
             "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
             "component": {
               "name": "sap.suite.ui.generic.template.ObjectPage"

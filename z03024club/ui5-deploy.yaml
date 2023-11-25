@@ -2,7 +2,7 @@
 
 specVersion: "3.1"
 metadata:
-  name: z03024fplayer
+  name: z03024club
 type: application
 builder:
   resources:
@@ -17,7 +17,7 @@ builder:
           url: https://s72lp1.ucc.in.tum.de:8100
           client: "303"
         app:
-          name: Z03024FPLAYER01
+          name: Z03024CLUB
           package: $tmp
           transport: ""
         exclude:
