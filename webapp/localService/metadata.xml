@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="Z03_024_MATCHPLAYER_01_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="MatchPlayer" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MplayerId"/>
+                </Key>
+                <Property Name="MplayerId" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="ID of Match Player" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="MatchId" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Match ID" sap:sortable="false"/>
+                <Property Name="PlayerId" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="MU ID" sap:sortable="false"/>
+                <Property Name="Score" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="Score of player"/>
+            </EntityType>
+            <EntityContainer Name="Z03_024_MATCHPLAYER_01_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="MatchPlayerSet" EntityType="Z03_024_MATCHPLAYER_01_SRV.MatchPlayer" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <atom:link rel="self" href="https://s72lp1.ucc.in.tum.de:8100/sap/opu/odata/sap/Z03_024_MATCHPLAYER_01_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://s72lp1.ucc.in.tum.de:8100/sap/opu/odata/sap/Z03_024_MATCHPLAYER_01_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
